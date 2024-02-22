@@ -1,0 +1,36 @@
+
+from django.urls import path
+from gym import views
+
+urlpatterns = [
+    path('',views.index, name='index'),
+    path('admin_home/', views.admin_home, name='admin_home'),
+    path('logout/',views.Logout, name="logout"),
+    path('user_logout/',views.user_logout, name="user_logout"),
+    path('user_profile/', views.user_profile, name="user_profile"),
+    path('user_change_password/',views.user_change_password, name="user_change_password"),
+    path('booking_history/', views.booking_history, name='booking_history'),
+    path('manageCategory/', views.manageCategory, name='manageCategory'),
+    path('editCategory/<int:pid>', views.editCategory, name='editCategory'),
+    path('deleteCategory/<int:pid>', views.deleteCategory, name='deleteCategory'),
+    path('managePackageType/', views.managePackageType, name='managePackageType'),
+    path('editPackageType/<int:pid>', views.editPackageType, name='editPackageType'),
+    path('deletePackageType/<int:pid>', views.deletePackageType, name='deletePackageType'),
+    path('reg_user/', views.reg_user, name="reg_user"),
+    path('delete_user/<int:pid>', views.delete_user, name="delete_user"),
+    path('deleteBooking/<int:pid>', views.deleteBooking, name='deleteBooking'),
+    path('addPackage', views.addPackage, name='addPackage'),
+    path('managePackage/', views.managePackage, name='managePackage'),
+    path('deletePackage/<int:pid>', views.deletePackage, name='deletePackage'),
+    path('new_booking/', views.new_booking, name='new_booking'),
+    path('bookingReport/', views.bookingReport, name='bookingReport'),
+    path('regReport/', views.regReport, name='regReport'),
+    path('changePassword', views.changePassword, name='changePassword'),
+    path('editPackage/<int:pid>', views.editPackage, name='editPackage'),
+    path('registration/',views.registration, name="registration"),
+    path('user_login/',views.user_login, name="user_login"),
+    path('apply-booking/<int:pid>/', views.apply_booking, name="apply_booking"),
+    path('booking_detail/<int:pid>/', views.booking_detail, name="booking_detail"),
+    path('initiate_payment/<int:booking_id>/', views.initiate_payment, name='initiate_payment'),
+    # path('payment_success/', views.payment_success, name='payment_success'),
+]
